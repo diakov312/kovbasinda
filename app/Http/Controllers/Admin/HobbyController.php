@@ -38,7 +38,7 @@ class HobbyController extends Controller
      */
     public function store(Request $request)
     {
-        //Добавление хобби из формы
+        //Adding hobbies element in DB
         $newHobbyElement = new Hobby();
         $newHobbyElement->name_hobby = $request->input('nameHobby');
         $newHobbyElement->preliminary_description_hobby = $request->input('preliminaryDescriptionHobby');

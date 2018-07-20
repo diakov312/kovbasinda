@@ -38,7 +38,7 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        //Добавление элемента портфолио
+        //Adding a portfolio element in DB
         $newPortfolioElement = new PortfolioElement();
         $newPortfolioElement->name_work = $request->input('nameWork');
         $newPortfolioElement->preliminary_description_work = $request->input('preliminaryDescriptionWork');

@@ -15,12 +15,14 @@ class CheckRole
      * @param  \Closure  $next
      * @return mixed
      */
+
+    //Посредник соответствия проверки роли пользователя admin
     public function handle($request, Closure $next)
     {
         $currUser = Auth::user();
 
         if ($currUser->role == 'admin') {
-            return $next($request);//Подумать на что выводиьт при несовпадении
+            return $next($request);
         }
 
         return response()->view('norights');

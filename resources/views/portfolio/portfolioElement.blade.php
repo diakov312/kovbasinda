@@ -27,7 +27,7 @@
                     <div class="12u 12u(mobile)">
                         <article class="box style2">
                             <h5>{{ $workElement->preliminary_description_work }}</h5>
-                            <img src="{{ $workElement->name_image_work }}" alt="" />
+                            <img src="{{ $workElement->name_image_work }}" alt="" style="max-width: 90%" />
                             <p>{{ $workElement->full_description_work }}</p>
                         </article>
                     </div>

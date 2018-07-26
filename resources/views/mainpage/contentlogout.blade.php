@@ -16,6 +16,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="https://github.com/diakov312" class="icon fa-github">
+                            <span class="label">Github</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="https://vk.com/id100511" class="icon fa-vk">
                             <span class="label">Github</span>
                         </a>
@@ -24,11 +29,6 @@
                     <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
                     <li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
                     <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>--}}
-                    <li>
-                        <a href="https://github.com/diakov312" class="icon fa-github">
-                            <span class="label">Github</span>
-                        </a>
-                    </li>
                     {{--<li><a href="#" class="icon fa-skype"><span class="label">Skype</span></a></li>
                     <li><a href="#" class="icon fa-whatsapp"><span class="label">Skype</span></a></li>--}}
 

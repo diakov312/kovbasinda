@@ -93,8 +93,10 @@ class HobbyController extends Controller
      * @param  \App\Hobby  $hobby
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Hobby $hobby)
+    public function destroy(Request $request, Hobby $hobby)
     {
-        //
+        //Удаление определенного хобби
+        $hobby::destroy($request->idhobby);
+        return redirect()->route('hobbies');
     }
 }

@@ -18,12 +18,16 @@ Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });     //Start page
+Route::get('/norights', function () {
+    return view('norights');
+})->name('norights'); //Page no rights
 
 Route::get('/portfolio', 'PortfolioController@getPortfolioList')->name('portfolio');    //Page list of works
 Route::get('/portfolioelement', 'PortfolioController@getPortfolioElement')->name('portfolioelement');//Page concrete work
 Route::get('/hobbies', 'HobbyController@getHobbyList')->name('hobbies');    //Page list of hobbies
 Route::get('/currhobby', 'HobbyController@getHobbyElement')->name('hobby'); //Page concrete hobby
 Route::post('/sendFeedback', 'MailController@sendContactForm'); //Send main form communication
+
 
 Route::group(['namespace'=>'Admin', 'middleware'=>['auth']], function () {
     Route::get('/adminpanel', 'AdminpanelController@index')->name('adminpanel');    //Page adminpanel

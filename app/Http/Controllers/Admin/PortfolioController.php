@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\ElementPortfolio;
 use App\PortfolioElement;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -57,10 +56,10 @@ class PortfolioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\ElementPortfolio  $elementPortfolio
+     * @param  \App\PortfolioElement $portfolioElement
      * @return \Illuminate\Http\Response
      */
-    public function show(ElementPortfolio $elementPortfolio)
+    public function show(PortfolioElement $portfolioElement)
     {
         //
     }
@@ -68,34 +67,38 @@ class PortfolioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ElementPortfolio  $elementPortfolio
+     * @param  \App\PortfolioElement $portfolioElement
      * @return \Illuminate\Http\Response
      */
-    public function edit(ElementPortfolio $elementPortfolio)
+    public function edit(PortfolioElement $portfolioElement)
     {
         //
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ElementPortfolio  $elementPortfolio
+     * @param  \App\PortfolioElement $portfolioElement
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ElementPortfolio $elementPortfolio)
+    public function update(Request $request, PortfolioElement $portfolioElement)
     {
         //
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ElementPortfolio  $elementPortfolio
+     * @param  \App\PortfolioElement  $elementPortfolio
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ElementPortfolio $elementPortfolio)
+    public function destroy(Request $request, PortfolioElement $portfolioElement)
     {
-        //
+        //Удаление определенного портфолио
+        $portfolioElement::destroy($request->idportfolio);
+        return redirect()->route('portfolio');
     }
 }

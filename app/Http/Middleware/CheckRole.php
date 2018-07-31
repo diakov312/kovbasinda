@@ -25,6 +25,6 @@ class CheckRole
             return $next($request);
         }
 
-        return response()->view('norights');
+        return redirect()->route('norights');
     }
 }

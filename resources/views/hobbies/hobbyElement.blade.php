@@ -33,10 +33,6 @@
                     </div>
                 </div>
             </div>
-            <footer>
-                <p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-                <a href="#contact" class="button big scrolly">Get in touch with me</a>
-            </footer>
         </article>
     </div>
 @endsection

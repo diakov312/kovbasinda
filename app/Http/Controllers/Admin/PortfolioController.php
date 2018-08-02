@@ -97,8 +97,14 @@ class PortfolioController extends Controller
      */
     public function destroy(Request $request, PortfolioElement $portfolioElement)
     {
-        //Удаление определенного портфолио
+        //Удаляем файл изображения с диска
+        $pathFile = $portfolioElement::find($request->idportfolio)->name_image_work;
+        Storage::disk('myDisk')->delete($pathFile);
+
+        //Удаление записи определенного портфолио из базы данных
         $portfolioElement::destroy($request->idportfolio);
+
+        //Удаление определенного портфолио
         return redirect()->route('portfolio');
     }
 }

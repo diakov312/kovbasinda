@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Hobby;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 
 class HobbyController extends Controller
@@ -95,8 +96,14 @@ class HobbyController extends Controller
      */
     public function destroy(Request $request, Hobby $hobby)
     {
-        //Удаление определенного хобби
+        //Удаляем файл изображения с диска
+        $pathFile = $hobby::find($request->idhobby)->name_image_hobby;
+        Storage::disk('myDisk')->delete($pathFile);
+
+        //Удаление записи определенного хобби из базы данных
         $hobby::destroy($request->idhobby);
+
+        //После удаления перенаправляем на вывод страницы с хобби.
         return redirect()->route('hobbies');
     }
 }

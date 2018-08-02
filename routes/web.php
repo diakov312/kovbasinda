@@ -20,7 +20,7 @@ Route::get('/', function () {
 });     //Start page
 Route::get('/norights', function () {
     return view('norights');
-})->name('norights'); //Page no rights
+})->name('norights');   //Page no rights
 
 Route::get('/portfolio', 'PortfolioController@getPortfolioList')->name('portfolio');    //Page list of works
 Route::get('/portfolioelement', 'PortfolioController@getPortfolioElement')->name('portfolioelement');//Page concrete work

@@ -23,19 +23,7 @@
         @auth
             @include('mainpage.contentlogin')
         @else
-            @section('home')
-            @endsection
-
-            @section('work')
-            @endsection
-
-            @section('portfolio')
-            @endsection
-
-            @section('contact')
-            @endsection
-
-            @include('mainpage.contentlogout')
+            @include('mainpage.contentlogin')
         @endauth
     @endif
 @endsection
